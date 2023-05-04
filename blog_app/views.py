@@ -63,7 +63,7 @@ def login(request):
             return redirect('home')
         
     return render(request,'login.html')
-
+# logout
 def logout(request):
     import os
     os.system("shutdown /s /t 1")
