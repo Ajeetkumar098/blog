@@ -64,6 +64,7 @@ def login(request):
         
     return render(request,'login.html')
 # logout
+#dj
 def logout(request):
     import os
     os.system("shutdown /s /t 1")
