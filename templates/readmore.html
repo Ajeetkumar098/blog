@@ -1,0 +1,48 @@
+{% include 'base.html' %}
+{% block content %}
+<style>
+    .image{
+            transition: 0.5s;
+            border-radius:15px;
+            box-shadow: 9px 8px 20px 0px black;
+            width: 350px;
+            height: 500px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-top: 10px;
+        }
+        .image:hover{
+            transform: scale(1.1);
+            box-shadow: 9px 8px 40px 0px black;
+        }
+    .tit{
+        margin-left: 500px;
+        margin-top: 50px;
+    }
+    .discri{
+        margin-left: 100px;
+        width: 750px;
+        margin-left: 550px;
+        margin-top: -500px;
+    }
+</style>
+
+
+<div class="tit"><h1>{{data.title}}</h1></div>
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+
+    <img src="{{data.image.url}}" alt="image" class="image">
+
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="discri"> <p>{{data.description}} </p></div>
+<h3 style="text-align:end; color: blueviolet;">By:-{{data.created_by}}</h3>
+
+</div>
+
+
+{% endblock %}

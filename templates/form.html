@@ -1,0 +1,17 @@
+{% include 'base.html' %}
+{% block content %}
+<style>
+    .t{
+        margin-top: 40px;
+    }
+</style>
+<div class="container t">
+{% load crispy_forms_tags %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+</form>
+
+</div>
+{% endblock %}

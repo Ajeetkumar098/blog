@@ -1,0 +1,22 @@
+{% include 'base.html' %}
+<body style="background-color:silver">
+    
+<center>
+     <h1>Profile </h1>
+{% for i in da1 %}
+username={{i.username}} <br>
+Email Address={{i.email}}
+{% endfor %}
+<br>
+<br>
+{% for i in da2 %}
+<img src="{{i.image.url}}" alt="img" style="border-radius: 50%;" width="300px" height="200px"><br>
+<button class="btn-outline-info">
+  <a href="{%url 'update' i.id %}">Update Image</a> 
+{{i.nimg}}
+{% endfor %}
+<button class="btn-outline-denger">
+  <a href="changep">Change Password</a> </button> 
+</center>
+</body>
+
